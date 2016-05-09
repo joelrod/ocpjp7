@@ -67,11 +67,17 @@ public class LeerCorreoJava {
 
             Store store = session.getStore("imaps");
 
-            store.connect("imap.gmail.com", "velocirraptor79.1@gmail.com", "aeiou123");
+            //Config connect to gmail test ok
+            //store.connect("imap.gmail.com", "velocirraptor79.1@gmail.com", "aeiou123");
+            
+            //Config ok for hotmail imap connected
+            store.connect("imap-mail.outlook.com", "velocirraptor79@hotmail.com", "@marylin**13");
+            
 
             System.out.println(store);
 
-            Folder inbox = store.getFolder("Inbox");
+            //Folder inbox = store.getFolder("Inbox");
+            Folder inbox = store.getFolder("Notificaciones Bank");
 
             inbox.open(Folder.READ_ONLY);
 
@@ -79,7 +85,7 @@ public class LeerCorreoJava {
 
             Message messages[] = inbox.search(ft);
 
-            for (Message message : messages) {
+            for (Message message : messages) {   
 
             // message.setFlag(Flags.Flag.ANSWERED, true);
                // message.setFlag(Flags.Flag.SEEN, true);
