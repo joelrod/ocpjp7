@@ -153,7 +153,7 @@ public class LeerCorreoJava {
 
         } else if (o instanceof Multipart) {
 
-            System.out.println("esto es multipart");
+            System.out.println("====================> multipart");
 
             Multipart mp = (Multipart) o;
 
