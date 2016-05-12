@@ -13,7 +13,7 @@ import javax.mail.search.FlagTerm;
  *
  * @author ihsa
  */
-public class ReadHotamail {
+public class ReadHotmail {
 
     public static void main(String[] args) {
 
@@ -30,7 +30,7 @@ public class ReadHotamail {
             store.connect("smtp.live.com", "velocirraptor79@hotmail.com", "@marylin**13");
             
             //connection configuration
-            Folder folder = store.getFolder("INBOX");
+            Folder folder = store.getFolder("Notificaciones Bank");
             folder.open(Folder.READ_WRITE);
 
             //get all unread messages in the inbox
