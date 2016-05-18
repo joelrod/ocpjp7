@@ -7,20 +7,16 @@ package Base;
 
 /**
  *
- * @author jorodriguez
+ * @author ihsa
  */
-public class Base {
-
-    public static void foo(Base bObj) {
-        System.out.println("In Base.foo()");
-        bObj.bar();
+public class OverrideTest {
+    public static void main(String[] args) {
+          Base bObj = new Derived();
+        bObj.foo(bObj);
     }
-
-    public void bar() {
-        System.out.println("In Base.bar()");
-    }
+   
 }
-
+//
 class Derived extends Base {
 
     public static void foo(Base bObj) {
@@ -33,11 +29,15 @@ class Derived extends Base {
     }
 }
 
-class OverrideTest {
+class Base {
 
-    public static void main(String[] args) {
-        Base bObj = new Derived();
-        bObj.foo(bObj);
+    public static void foo(Base bObj) {
+        System.out.println("In Base.foo()");
+        bObj.bar();
+    }
+
+    public void bar() {
+        System.out.println("In Base.bar()");
     }
 }
 
@@ -57,10 +57,11 @@ class OverrideTest {
 
  my answer :
 
+
  B)
 
 
 result
 
-
+B)
  */
