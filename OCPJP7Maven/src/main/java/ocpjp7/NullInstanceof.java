@@ -19,6 +19,7 @@ public class NullInstanceof {
         } else {
             System.out.println("str is not Object");
         }
+        
     }
     
     /*
